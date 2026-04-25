@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Kiwi | Nature's Red Gem</title>
+    <meta name="description" content="Discover the sweet ruby center and Vitamin C-packed premium Ruby Kiwi.">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="main-nav">
+        <a href="#" class="logo">
+            <i>🥝</i> RUBY KIWI
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#story">Story</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html" class="lang-switch">KO</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Order Now</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-tagline">Premium Red Kiwi Variety</span>
+            <h1>The Sweetest Gem in the World,<br><span>Ruby Kiwi</span></h1>
+            <p>A vibrant red starburst hidden beneath a green skin. Experience the pinnacle of premium fruit—twice as sweet as regular kiwis and packed with even more nutrients.</p>
+            <div class="hero-btns">
+                <a href="#product" class="btn-primary">Explore Product</a>
+                <a href="#story" class="btn-secondary">Our Story</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-shape"></div>
+            <img src="assets/ruby-kiwi-hero.png" alt="Ruby Kiwi Hero Image" id="hero-img">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="product">
+        <div class="section-header">
+            <h2>Why Choose Ruby Kiwi?</h2>
+            <p>Nature's perfect balance of taste and nutrition. Check out these three reasons why Ruby Kiwi is so special.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h3><span class="keyword">Vitamin C</span> Powerhouse</h3>
+                <p>Contains significantly more Vitamin C than regular kiwis. Support your family's <span class="keyword">immunity</span> and start your day with energy.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i data-lucide="heart"></i>
+                </div>
+                <h3>Incredible <span class="keyword">Sweetness</span> (20+ Brix)</h3>
+                <p>Reduced acidity and maximized sweetness. Experience a <span class="keyword">natural candy</span> flavor that kids love more than snacks.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i data-lucide="sparkles"></i>
+                </div>
+                <h3>Antioxidant <span class="keyword">Anthocyanins</span></h3>
+                <p>The red center is rich in anthocyanins, providing powerful <span class="keyword">antioxidant benefits</span> for anti-aging and eye protection.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story" id="story">
+        <div class="story-image">
+            <img src="assets/ruby-kiwi-story.png" alt="Ruby Kiwi Story Image" class="reveal">
+        </div>
+        <div class="story-content">
+            <h2>Grown Like a Rare Gem,<br>A Fruit Like No Other</h2>
+            <p>Ruby Kiwi is a rare variety grown only in select regions worldwide. We cultivate each fruit with artisan care under fertile soil and abundant sunlight.</p>
+            <p>After an optimal ripening process, the moment it reaches you, Ruby Kiwi will deliver an impression unlike any other fruit.</p>
+            <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Get Ruby Kiwi News</h2>
+        <p>Be the first to receive fresh harvest updates and special discount offers.</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ruby Kiwi Co. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">Design & Development: Premium Ag Creative</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .reveal').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

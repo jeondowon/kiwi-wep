@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>루비 키위 | 자연이 선사하는 붉은 보석</title>
+    <meta name="description" content="달콤한 루비빛 속살, 비타민 C가 가득한 프리미엄 루비 키위를 만나보세요.">
+    <link rel="stylesheet" href="index.css">
+    <!-- Lucide Icons for modern icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="main-nav">
+        <a href="#" class="logo">
+            <i>🥝</i> RUBY KIWI
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">홈페이지</a></li>
+            <li><a href="#product">제품</a></li>
+            <li><a href="#story">스토리</a></li>
+            <li><a href="#contact">문의</a></li>
+            <li><a href="index_en.html" class="lang-switch">EN</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">지금 주문하기</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-tagline">Premium Red Kiwi Variety</span>
+            <h1>세상에서 가장 달콤한 보석,<br><span>루비 키위</span></h1>
+            <p>초록빛 껍질 속 숨겨진 선명한 레드 스타버스트. 일반 키위보다 2배 더 달콤하고 영양가는 더 풍부한 프리미엄 과일의 정점을 경험하세요.</p>
+            <div class="hero-btns">
+                <a href="#product" class="btn-primary">제품 알아보기</a>
+                <a href="#story" class="btn-secondary">우리의 이야기</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-shape"></div>
+            <img src="assets/ruby-kiwi-hero.png" alt="Ruby Kiwi Hero Image" id="hero-img">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="product">
+        <div class="section-header">
+            <h2>왜 루비 키위인가요?</h2>
+            <p>자연이 빚어낸 가장 완벽한 비율의 맛과 영양. 루비 키위가 특별한 3가지 이유를 확인해보세요.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h3><span class="keyword">비타민 C</span> 폭탄</h3>
+                <p>일반 키위보다 비타민 C 함유량이 월등히 높습니다. 하루 한 알로 챙기는 우리 가족의 <span class="keyword">면역력</span>과 활기찬 아침.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i data-lucide="heart"></i>
+                </div>
+                <h3>놀라운 <span class="keyword">당도</span> (20+ Brix)</h3>
+                <p>신맛은 줄이고 달콤함은 극대화했습니다. 아이들도 과자보다 더 좋아하는 <span class="keyword">천연 사탕</span> 같은 달콤함을 느껴보세요.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i data-lucide="sparkles"></i>
+                </div>
+                <h3>항산화 <span class="keyword">안토시아닌</span></h3>
+                <p>붉은색 중심부의 안토시아닌 성분은 강력한 <span class="keyword">항산화 작용</span>을 도와 노화 방지와 시력 보호에 탁월합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story" id="story">
+        <div class="story-image">
+            <img src="assets/ruby-kiwi-story.png" alt="Ruby Kiwi Story Image" class="reveal">
+        </div>
+        <div class="story-content">
+            <h2>보석처럼 귀하게 키워낸<br>단 하나의 과일</h2>
+            <p>루비 키위는 전 세계 일부 지역에서만 재배되는 희귀 품종입니다. 우리는 가장 비옥한 토양과 풍부한 일조량 아래서 장인의 손길로 하나하나 정성스럽게 수확합니다.</p>
+            <p>수확 후 최적의 후숙 과정을 거쳐 소비자에게 전달되는 순간, 루비 키위는 그 어떤 과일과도 비교할 수 없는 감동을 선사할 것입니다.</p>
+            <a href="#" class="btn-secondary">더 자세히 보기</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>루비 키위 소식 받기</h2>
+        <p>신선한 수확 소식과 특별 할인 혜택을 가장 먼저 받아보세요.</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('신청되었습니다!');">
+            <input type="email" placeholder="이메일 주소를 입력해주세요" required>
+            <button type="submit">구독하기</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ruby Kiwi Co. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">디자인 및 개발: Premium Ag Creative</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Simple animation trigger on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .reveal').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
