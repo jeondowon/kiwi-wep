@@ -1,2 +1,2 @@
-# kiwi-wep
+# kiwi-web
 AI Agent Challenge Kiwi Web
